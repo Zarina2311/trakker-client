@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AddCard from "../Cards/AddCard";
-import Card from "../Cards/Card";
+import Card from "../Cards";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
