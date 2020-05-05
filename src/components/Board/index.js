@@ -19,7 +19,6 @@ const Board = ({ userId = 1 }) => {
 
   const addColumn = ({ name }) => {
     // TODO add column via api, then refetch columns
-
     // optimistic update
     setColumns([...columns, { name, id: Math.random() }]); // mock
   };
@@ -27,7 +26,6 @@ const Board = ({ userId = 1 }) => {
   const deleteColumn = (columnId) => {
     if (window.confirm("Are you sure?")) {
       // TODO delete column via API, then refetch columns
-
       // optimistic update
       setColumns([...columns].filter((column) => column.id !== columnId));
     }

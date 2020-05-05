@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css";
 
-function Card({ content, index, onDragStart, deleteItem }) {
+const Card = ({ content, index, onDragStart, deleteItem }) => {
   return (
     <div className="Card" draggable="true" id={index} onDragStart={onDragStart}>
       <FontAwesomeIcon
@@ -13,6 +13,6 @@ function Card({ content, index, onDragStart, deleteItem }) {
       {content}
     </div>
   );
-}
+};
 
 export default Card;

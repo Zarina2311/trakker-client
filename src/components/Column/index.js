@@ -29,7 +29,6 @@ const Column = ({
 
   const addCard = ({ content }) => {
     // TODO add card via api, then refetch cards for this column
-
     // optimistic update
     setCards([...cards, { content, id: Math.random() }]);
   };
@@ -37,7 +36,6 @@ const Column = ({
   const deleteCard = (cardId) => {
     if (window.confirm("Are you sure?")) {
       // TODO delete card via api, then refetch cards for this column
-
       // optimistic update
       setCards([...cards].filter((card) => card.id !== cardId));
     }
