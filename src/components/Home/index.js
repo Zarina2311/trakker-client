@@ -1,18 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
+import { Redirect } from "react-router-dom";
+import { useAuth0 } from "../../utils/react-auth0-spa";
 import "./style.css";
 
 function Home() {
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
+  if (isAuthenticated) {
+    return <Redirect to="/board" />;
+  }
+
   return (
     <div className="Home">
       <div className="topbar">
         <h1>Trakker</h1>
-        <Link to="/login">
-          <Button className="login-button" color="info">
+        <div>
+          <Button
+            className="login-button"
+            color="info"
+            onClick={() => loginWithRedirect({})}
+          >
             Log In
           </Button>
-        </Link>
+        </div>
       </div>
       <div className="content">
         <h3>Job Search Tracking Just Got Easy</h3>
@@ -33,11 +44,14 @@ function Home() {
         />
         <br />
         <br />
-        <Link to="/signup">
-          <Button className="signup-button" size="lg" color="info">
-            Sign Up - It's Free
-          </Button>
-        </Link>
+        <Button
+          className="signup-button"
+          size="lg"
+          color="info"
+          onClick={() => loginWithRedirect({})}
+        >
+          Sign Up - It's Free
+        </Button>
         <br />
       </div>
     </div>
