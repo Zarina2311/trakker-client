@@ -71,6 +71,7 @@ function Home() {
           <br />
           <br />
           <h4>Create a column and give it a name</h4>
+          <br />
           <img
             className="new-column"
             src="new-column.png"
@@ -83,6 +84,7 @@ function Home() {
           <br />
           <br />
           <h4>Create cards of the companies and positions you've applied to</h4>
+          <br />
           <img
             src="new-card.png"
             alt="create-new-card"
@@ -94,6 +96,7 @@ function Home() {
           <br />
           <br />
           <h4>Drag and drop each card according to your job hunt progress</h4>
+          <br />
           <img
             src="applied.png"
             alt="drag-n-drop-feature"
